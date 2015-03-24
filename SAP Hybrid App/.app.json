@@ -1,11 +1,42 @@
 {
   "type": "kendo-ui-mobile",
-  "isNew": true,
+  "name": "Kendo UI Mobile App",
+  "navigation": "none",
+  "views": [
+    {
+      "type": "view",
+      "name": "home",
+      "title": "Business Partners",
+      "addToNavigation": false,
+      "components": [
+        {
+          "type": "list",
+          "name": "list",
+          "dataProvider": "defaultProvider",
+          "collection": "Orders",
+          "masterDetails": false,
+          "iconField": false,
+          "headerField": "Text",
+          "pullToRefresh": false,
+          "endlessScroll": false
+        }
+      ]
+    },
+    {
+      "type": "view",
+      "name": "partnerDetails",
+      "title": "Partner Details",
+      "addToNavigation": false,
+      "components": []
+    }
+  ],
+  "view": "home",
+  "skin": "flat",
   "dataProviders": [
     {
       "type": "dataProvider",
-      "title": "DefaultProvider",
       "name": "defaultProvider",
+      "title": "DefaultProvider",
       "source": "everlive",
       "everliveKey": "SYKvpaE6gzcrAuag"
     }
