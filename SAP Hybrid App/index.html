@@ -14,27 +14,64 @@
     <script src="bower_components/kendo-ui-appbuilder-core/js/jquery.min.js"></script>
     <script src="bower_components/kendo-ui-appbuilder-core/js/kendo.mobile.min.js"></script>
     <script src="bower_components/everlive/min/everlive.all.min.js"></script>
+    <!--
     <script src="app.js"></script>
     <script src="data/defaultProvider.js"></script>
+    -->
+    
+    <script src="scripts/settings.js"></script>
+    <script src="scripts/app.js"></script>
+    <script src="scripts/partners.js"></script>
+    <script src="scripts/partner.js"></script>
+    <script src="scripts/orders.js"></script>
+    <script src="scripts/order.js"></script>
 </head>
 
 <body id="kendo-ui-mobile-app">
-    <div data-role="layout" data-id="main">
-        <header data-role="header">
-            <div data-role="navbar">
-                <span data-role="view-title"></span>
+<!--
+<div data-role="layout" data-id="main">
+    <header data-role="header">
+        <div data-role="navbar">
+            <span data-role="view-title"></span>
+        </div>
+    </header>
+
+    <footer data-role="footer">
+    </footer>
+</div>
+-->
+    
+        <div id="homeView" data-role="view" data-model="app.Partners" data-init="app.Partners.init">
+            
+            <header data-role="header">
+                <div data-role="navbar">
+                    Business Partners
+                </div>                
+            </header>
+            
+            <ul id="partners-listview" data-role="listview" 
+                data-template="activityTemplate"
+                data-bind="source: partners"
+                data-style="inset"
+                data-filterable="{field:'Company',operator:'startswith'}"></ul>
+            
+        </div>
+        
+        <script type="text/x-kendo-template" id="activityTemplate">
+            <div data-role="touch" data-bind="events: { tap: partnerSelected }">
+                <div style="font-size:20px;font-weight:bold;color:black">
+                    <span>${Company}</span>
+                </div>
+                <div style="color:black">${City} ${PostalCode}, ${Country}</div>
             </div>
-        </header>
+        </script>
 
-        <!-- application views will be rendered here -->
-
-        <footer data-role="footer">
-        </footer>
-    </div>
-    <script src="home/index.js"></script>
-    <script src="partnerDetails/index.js"></script>
-    <script src="partnerOrders/index.js"></script>
-    <script src="orderDetails/index.js"></script>
+<!--
+<script src="home/index.js"></script>
+<script src="partnerDetails/index.js"></script>
+<script src="partnerOrders/index.js"></script>
+<script src="orderDetails/index.js"></script>
+-->
 </body>
 
 </html>
