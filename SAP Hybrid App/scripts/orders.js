@@ -70,7 +70,9 @@ app.Orders = (function () {
         var orderSelected = function (e) {
             var orderUid = $(e.touch.currentTarget).data("uid");
             appSettings.sessionSettings.selectedOrder = ordersModel.orders.getByUid(orderUid);
-            app.mobileApp.navigate(appSettings.viewSettings.orderView);
+            //console.log(appSettings.sessionSettings.selectedOrder);
+            //app.mobileApp.navigate(appSettings.viewSettings.orderView);
+            app.mobileApp.navigate("#order-view2");
         };
 
         var show = function (e) {

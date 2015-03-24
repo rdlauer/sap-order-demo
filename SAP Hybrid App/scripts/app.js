@@ -4,8 +4,7 @@ var app = (function(win){
     // Global error handling
     var showAlert = function(message, title, callback) {
         console.log(message);
-        navigator.notification.alert(message, callback || function () {
-        }, title, 'OK');
+        //navigator.notification.alert(message, callback || function () {}, title, 'OK');
     };
 	
 	var showError = function(message) {

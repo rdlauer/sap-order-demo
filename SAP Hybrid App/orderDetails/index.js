@@ -1,5 +1,5 @@
 'use strict';
 
-app.models.orderDetails = (function() {
-    return {};
-})();
+//app.models.orderDetails = (function() {
+//    return {};
+//})();

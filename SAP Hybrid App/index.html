@@ -6,13 +6,15 @@
     <meta charset="utf-8">
     <link href="bower_components/kendo-ui-appbuilder-core/styles/kendo.mobile.all.min.css" rel="stylesheet">
     <link href="styles/main.css" rel="stylesheet">
-    <link href="styles/app.css" rel="stylesheet">
+    <link href="kendo/styles/kendo.dataviz.min.css" rel="stylesheet" />
+    <link href="kendo/styles/kendo.dataviz.flat.min.css" rel="stylesheet" />    
 
     <!-- cordova script (this will be a 404 during development if served with `grunt serve`) -->
     <script src="cordova.js"></script>
 
     <script src="bower_components/kendo-ui-appbuilder-core/js/jquery.min.js"></script>
-    <script src="bower_components/kendo-ui-appbuilder-core/js/kendo.mobile.min.js"></script>
+    <!--<script src="bower_components/kendo-ui-appbuilder-core/js/kendo.mobile.min.js"></script>-->
+    <script src="kendo/js/kendo.all.min.js"></script>
     <script src="bower_components/everlive/min/everlive.all.min.js"></script>
     <!--
     <script src="app.js"></script>
@@ -25,6 +27,13 @@
     <script src="scripts/partner.js"></script>
     <script src="scripts/orders.js"></script>
     <script src="scripts/order.js"></script>
+    <style>
+        .km-bck:after,
+        .km-bck:before
+        {
+            content: "\e013";
+        }
+    </style>
 </head>
 
 <body id="kendo-ui-mobile-app">
@@ -66,6 +75,67 @@
             </div>
         </script>
 
+
+    
+        <div data-role="view" id="order-view2" data-show="app.Order.show" data-hide="app.Order.hide">
+            <header data-role="header">
+                <div data-role="navbar">
+                    Order Details
+                    <a data-align="left" data-icon="bck" data-role="backbutton"></a>
+                </div>
+            </header>
+            <ul id="partner-view-container" data-role="listview" data-style="inset" class=colorblack>
+                <li>
+                    <div align=center>
+                        <span style="font-weight:bold;font-size:20px">SO:</span><span style="font-weight:bold;font-size:20px" data-bind="text: SalesOrderID">
+                        </span>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <span>Order Date:</span>
+                        <br>
+                        <b>
+                            <span data-bind="text: CreatedAtFormatted"></span>
+                        </b>
+                    </div>
+                    <div>&nbsp;</div>
+                    <div>
+                        <span>Net Sum:</span>
+                        <br>
+                        <b>
+                            <span data-bind="text: Currency"></span> <span data-bind="text: NetSum"></span>
+                        </b>
+                    </div>
+                    <div>&nbsp;</div>
+                    <div>
+                        <span>Tax:</span>
+                        <br>
+                        <b>
+                            <span data-bind="text: Currency"></span> <span data-bind="text: Tax"></span>
+                        </b>
+                    </div>
+                    <div>&nbsp;</div>
+                    <div>
+                        <span>Total Sum:</span>
+                        <br>
+                        <b>
+                            <span data-bind="text: Currency"></span> <span data-bind="text: TotalSum"></span>
+                        </b>
+                    </div>
+                    <div>&nbsp;</div>
+                    <div>
+                        <span>Note:</span>
+                        <br/>
+                        <b>
+                            <span data-bind="text: Note"></span>
+                        </b>
+                    </div>
+                    <div id="order-chart"></div>
+                </li>
+            </ul>
+        </div>
+    
 <!--
 <script src="home/index.js"></script>
 <script src="partnerDetails/index.js"></script>

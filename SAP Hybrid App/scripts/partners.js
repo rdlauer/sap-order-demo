@@ -58,6 +58,7 @@ app.Partners = (function () {
         
         var partnerSelected = function (e) {
             appSettings.sessionSettings.selectedPartner = e.data;
+            //console.log(appSettings.viewSettings.partnerView + '?uid=' + e.data.uid);
             app.mobileApp.navigate(appSettings.viewSettings.partnerView + '?uid=' + e.data.uid);
         };
 
