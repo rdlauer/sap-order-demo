@@ -1,0 +1,13 @@
+<div data-role="view" data-title="Sales Orders" data-layout="main" data-model="app.models.partnerOrders">
+
+    <ul data-role="listview" data-style="inset" data-template="partnerOrdersListTemplate" data-bind="{ source: partnerOrdersList.viewModel.dataSource, events: {click: partnerOrdersList.viewModel.itemClick} }" data-pull-to-refresh="false" data-endless-scroll="false">
+
+    </ul>
+    <script type="text/x-kendo-template" id="partnerOrdersListTemplate">
+        <div class="image-with-text">
+
+            <h3>#: data.Text #</h3>
+
+        </div>
+    </script>
+</div>

@@ -28,6 +28,32 @@
       "title": "Partner Details",
       "addToNavigation": false,
       "components": []
+    },
+    {
+      "type": "view",
+      "name": "partnerOrders",
+      "title": "Sales Orders",
+      "addToNavigation": false,
+      "components": [
+        {
+          "type": "list",
+          "name": "partnerOrdersList",
+          "dataProvider": "defaultProvider",
+          "collection": "Orders",
+          "masterDetails": false,
+          "iconField": false,
+          "headerField": "Text",
+          "pullToRefresh": false,
+          "endlessScroll": false
+        }
+      ]
+    },
+    {
+      "type": "view",
+      "name": "orderDetails",
+      "title": "Order Details",
+      "addToNavigation": false,
+      "components": []
     }
   ],
   "view": "home",
