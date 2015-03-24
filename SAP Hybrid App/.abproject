@@ -1,0 +1,40 @@
+{
+  "ProjectName": "SAP Hybrid App",
+  "ProjectGuid": "5572ac8a-ec78-48aa-af03-62022f598bd3",
+  "projectVersion": 1,
+  "AppIdentifier": "com.telerik.SAPHybridApp",
+  "DisplayName": "SAP Hybrid App",
+  "Author": "",
+  "Description": "",
+  "BundleVersion": "1.0",
+  "AndroidVersionCode": "1",
+  "iOSDeviceFamily": [
+    "1",
+    "2"
+  ],
+  "iOSBackgroundMode": [],
+  "ProjectTypeGuids": "{070BCB52-5A75-4F8C-A973-144AF0EAFCC9}",
+  "FrameworkVersion": "3.5.0",
+  "AndroidPermissions": [],
+  "DeviceOrientations": [
+    "Portrait",
+    "Landscape"
+  ],
+  "AndroidHardwareAcceleration": "false",
+  "iOSStatusBarStyle": "Default",
+  "Framework": "Cordova",
+  "WP8TileTitle": "",
+  "WP8Publisher": "",
+  "WP8Capabilities": [],
+  "WP8Requirements": [],
+  "WP8PublisherID": "{4983008c-48a4-4a9d-99c9-141f1b8e2ca6}",
+  "WP8ProductID": "{24dfed2f-774f-4cc7-bfae-b9a457920380}",
+  "WPSdk": "8.0",
+  "WP8PackageIdentityName": "1234Telerik.SAPHybridApp",
+  "WP8WindowsPublisherName": "CN=Telerik",
+  "WP8SupportedResolutions": [
+    "ID_RESOLUTION_WVGA",
+    "ID_RESOLUTION_WXGA",
+    "ID_RESOLUTION_HD720P"
+  ]
+}
